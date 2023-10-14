@@ -15,14 +15,14 @@ on:
 env:
   MANIFEST: https://github.com/minimal-manifest-twrp/platform_manifest_twrp_aosp -b twrp-12.1
   DEVICE: sofiar
-  DT_LINK: https://github.com/twrpdtgen/android_device_motorola_sofiar/tree/sofiar_retail-user-11-RPES31.Q4U-47-35-11-5f1af-release-keys
-  DT_PATH: device/motorola/sofiar
+  DT_LINK: https://github.com/Ctps123/android_device_motorola_amogus
+  DT_PATH: device/motorola/amogus
   TARGET: recoveryimage
   TZ: Asia/manila
 
 jobs:
   build:
-    runs-on: ubuntu-18.04
+    runs-on: ubuntu-latest
 
     steps:
        - name: Checkout
@@ -63,6 +63,6 @@ jobs:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
          with:
           tag_name: TWRP_12.1
-          name: TWRP-SOFIAR
+          name: TWRP-amogus
           files: | 
             work/out/target/product/sofiar/recovery.img
